@@ -1,0 +1,7 @@
+sources:
+  - name: Jaffle_source
+    database: Jaffle_Shop_Database
+    schema: jaffle_shop_Schema
+    tables:
+      - name: Customers
+      - name: Orders

@@ -6,7 +6,7 @@ With orders as (
         ORDERED_AT as order_date,
         ORDER_TOTAL as amount
 
-    from Jaffle_Shop_Database.jaffle_shop_Schema.Orders
+    from {{source('Jaffle_Source','Orders')}}
 
 )
 

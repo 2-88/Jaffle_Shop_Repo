@@ -9,8 +9,8 @@ With customer_orders as (
     select
         order_id, customer_id,
 
-        min(order_date) as first_order_date,
-        max(order_date) as most_recent_order_date,
+        min(loaded_at) as first_order_date,
+        max(loaded_at) as most_recent_order_date,
         count(order_id) as number_of_orders,
         amount
        

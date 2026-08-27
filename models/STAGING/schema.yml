@@ -1,0 +1,25 @@
+models:
+  - name: stg_Customers
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: stg_Orders
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_Customers')
+                field: customer_id
+
+
+
+

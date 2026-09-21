@@ -2,6 +2,7 @@ models:
   - name: stg_Customers
     columns:
       - name: customer_id
+        description: primary key for stg_Customers table
         data_tests:
           - not_null
           - unique
@@ -9,11 +10,13 @@ models:
   - name: stg_Orders
     columns:
       - name: order_id
+        description: primary key for stg_Orders table
         data_tests:
           - not_null
           - unique
 
       - name: customer_id
+        description: "{{ doc('primary_key_test')}}"
         data_tests:
           - relationships:
               arguments:

@@ -1,13 +1,16 @@
 sources:
-  - name: Jaffle_Source
+  - name: Jaffle_Source 
     database: Jaffle_Shop_Database
     schema: jaffle_shop_Schema
+    description: a clone of my dkt application database
     tables:
       - name: Customers
+        description: raw customers data
        
         
 
       - name: Orders 
+        description: raw orders data
         config: 
           freshness:
             warn_after:

@@ -1,3 +1,7 @@
+{{ config(
+    schema='jaffle_shop_Schema'
+) }}
+
 With orders as (
 
     select

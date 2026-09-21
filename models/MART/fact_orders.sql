@@ -1,3 +1,8 @@
+{{ config(
+    schema='jaffle_shop_Schema'
+) }}
+
+
 With fact_orders as (select customer_id, order_id, DATEDIFF('day', first_order_date, most_recent_order_date) as recency, number_of_orders as frequency, sum(amount) as amount
 from {{ref('DIM_Customers')}}
 group by 
